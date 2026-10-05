@@ -1,0 +1,59 @@
+Copyright (c) 2026 Renan Augusto dos Santos. Todos os direitos reservados.
+
+LogiFlow 3D — Licença proprietária
+
+Este repositório é público apenas para fins de portfólio e avaliação
+profissional. A publicação do código não concede nenhuma licença de uso.
+
+É PERMITIDO, sem autorização prévia:
+  1. Visualizar o código-fonte e a demonstração publicada.
+  2. Fazer fork pelo próprio GitHub, exclusivamente na medida exigida pelos
+     Termos de Serviço do GitHub, sem uso do conteúdo fora da plataforma.
+
+NÃO É PERMITIDO, sem autorização prévia e por escrito do autor:
+  1. Copiar, reproduzir ou redistribuir o código, no todo ou em parte.
+  2. Modificar o código ou criar trabalhos derivados.
+  3. Usar o código, a identidade visual, os modelos 3D ou os textos em
+     produtos, serviços, sites, sistemas ou portfólios de terceiros.
+  4. Usar o projeto, no todo ou em parte, para fins comerciais.
+  5. Sublicenciar, vender ou ceder qualquer direito sobre o projeto.
+
+Componentes de terceiros incluídos no repositório mantêm suas próprias
+licenças: `components/ui/` (shadcn/ui, MIT), `vendor/` e
+`build/sites-vite-plugin.ts` (arquivos de licença ao lado de cada um) e as
+dependências listadas em `package.json`. Esta licença não altera esses termos.
+
+Pedidos de autorização: https://github.com/renanfrontend
+
+O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIAS DE
+QUALQUER TIPO. EM NENHUMA HIPÓTESE O AUTOR SERÁ RESPONSÁVEL POR DANOS
+DECORRENTES DO USO DO SOFTWARE.
+
+-------------------------------------------------------------------------------
+
+English
+
+Copyright (c) 2026 Renan Augusto dos Santos. All rights reserved.
+
+This repository is public for portfolio and professional evaluation purposes
+only. Publishing the source code does not grant any license.
+
+You MAY, without prior permission:
+  1. View the source code and the published demo.
+  2. Fork it on GitHub solely to the extent required by GitHub's Terms of
+     Service, without using the content outside the platform.
+
+You MAY NOT, without the author's prior written permission:
+  1. Copy, reproduce or redistribute the code, in whole or in part.
+  2. Modify the code or create derivative works.
+  3. Use the code, visual identity, 3D models or copy in third-party products,
+     services, websites, systems or portfolios.
+  4. Use the project, in whole or in part, for commercial purposes.
+  5. Sublicense, sell or transfer any rights to the project.
+
+Third-party components in this repository remain under their own licenses
+(see above). This license does not change those terms.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. IN NO EVENT
+SHALL THE AUTHOR BE LIABLE FOR ANY DAMAGES ARISING FROM THE USE OF THE
+SOFTWARE.
