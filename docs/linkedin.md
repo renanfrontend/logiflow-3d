@@ -63,7 +63,7 @@ Os dados são fictícios: é um projeto de demonstração.
 
 💡 Quer tirar do papel um site ou sistema como esse, fácil de usar e com a cara do seu negócio? Me chama na DM e vamos conversar sobre a sua ideia!
 
-Código e demo: github.com/renanfrontend/logiflow-3d
+🔗 Veja o sistema funcionando: renanfrontend.github.io/logiflow-3d
 
 #frontend #react #threejs #ux #experienciadousuario #webdev #desenvolvedorfrontend #desenvolvimentoweb #sistemasweb #criacaodesites
 
