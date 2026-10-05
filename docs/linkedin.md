@@ -4,35 +4,39 @@ Vídeos: `logiflow-3d-linkedin-16x9.mp4` (LinkedIn) e `logiflow-3d-reels-9x16.mp
 
 ## LinkedIn
 
-E se um sistema corporativo fosse tão intuitivo quanto um jogo?
+Sistemas corporativos não precisam parecer planilhas.
 
-Dashboards mostram números, mas numa operação logística o problema quase sempre tem um lugar: uma doca parada, um armazém lotado, uma carga que não sai. Com essa ideia criei o LogiFlow 3D, um centro de distribuição interativo que roda direto no navegador.
+Criei o LogiFlow 3D para mostrar isso na prática: um centro de distribuição interativo, em 3D, rodando direto no navegador. Você gira o pátio, entra nos armazéns, acompanha caminhões e empilhadeiras e testa decisões em tempo real. Bloqueia uma doca, vê a carga travar, aplica um balanceamento e os indicadores reagem na hora.
 
-Em vez de interpretar uma tabela, você gira o pátio, entra nos armazéns, acompanha caminhões e empilhadeiras e testa decisões em tempo real. Bloqueia uma doca, vê a carga travar, aplica um balanceamento e os indicadores reagem na hora.
+É o tipo de experiência que gosto de construir: imersiva, quase gamificada, mas com a solidez de um produto de verdade.
 
-É gamificação a serviço da decisão: explorar, experimentar e entender causa e efeito sem risco para a operação real.
+Por trás do visual está o que mais de 7 anos de desenvolvimento frontend me ensinaram a priorizar:
 
-Acredito que interfaces imersivas são um caminho natural para sistemas corporativos. Treinamento de equipes, simulação de cenários, digital twins e onboarding ficam muito mais claros quando a pessoa enxerga a operação em vez de apenas imaginá-la.
+🧱 Arquitetura que escala
+Clean Architecture com regras de negócio puras, separadas da renderização 3D. A cena evolui sem quebrar a regra, e a regra é testada sem abrir o navegador.
 
-🤖 IA como copiloto, experiência como direção
-A IA acelerou pesquisa, prototipagem, refatorações e testes. Arquitetura, UX e critérios de qualidade vieram da experiência com o ecossistema React. A IA multiplica a velocidade; saber usar bem as bibliotecas e frameworks define onde essa velocidade chega.
+🔒 TypeScript estrito de ponta a ponta
+Tipos que impedem estados inválidos e transformam esquecimentos em erro de compilação, não em bug em produção.
 
-🛠️ Entrega com qualidade
-• React 19, TypeScript estrito, Three.js e React Three Fiber
-• Clean Architecture: regras de negócio puras, independentes da cena 3D
-• Testes automatizados nas regras de simulação
-• Acessibilidade: navegação por teclado, respeito a movimento reduzido e alternativa quando não há WebGL
-• Layout responsivo, funcionando também no celular
-• CI/CD no GitHub Actions com deploy automático no GitHub Pages
+🎯 UX e acessibilidade como requisito
+Navegação por teclado, respeito a movimento reduzido, alternativa quando não há WebGL e layout responsivo do desktop ao celular.
 
-Os dados são fictícios e as regras de simulação são explícitas. É uma prova de conceito para mostrar o potencial da abordagem, não um WMS real.
+⚡ Performance em 3D
+Cena carregada sob demanda, resolução e sombras controladas e modelos gerados por código, sem assets pesados.
+
+🚀 Entrega profissional
+Testes automatizados, pipeline de CI/CD no GitHub Actions e deploy automático a cada merge.
+
+Stack: React 19 · TypeScript · Vite · App Router compatível com Next.js · Three.js · React Three Fiber
+
+Os dados são fictícios: é uma prova de conceito de como interfaces imersivas podem tornar sistemas corporativos mais claros, engajantes e fáceis de aprender. Usei IA como ferramenta de produtividade no desenvolvimento.
+
+💼 Estou aberto a novas oportunidades como Desenvolvedor Frontend Sênior. Se sua empresa precisa de alguém que una React e TypeScript avançados, olhar apurado para UI/UX e fidelidade ao design para criar produtos que as pessoas gostam de usar, vamos conversar. Minha DM está aberta.
 
 🔗 Demo: https://renanfrontend.github.io/logiflow-3d/
 💻 Código: https://github.com/renanfrontend/logiflow-3d
 
-Em qual sistema do seu dia a dia uma experiência imersiva faria mais diferença?
-
-#React #TypeScript #Threejs #ReactThreeFiber #Frontend #UX #Gamificacao #InteligenciaArtificial #Inovacao
+#React #TypeScript #Frontend #Threejs #ReactThreeFiber #UX #DesenvolvedorFrontend #OpenToWork #Vagas
 
 ## Instagram Reels
 
