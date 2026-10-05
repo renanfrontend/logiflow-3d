@@ -4,39 +4,35 @@ Vídeos: `logiflow-3d-linkedin-16x9.mp4` (LinkedIn) e `logiflow-3d-reels-9x16.mp
 
 ## LinkedIn
 
-Dá para colocar Clean Architecture dentro de uma cena 3D?
+E se um sistema corporativo fosse tão intuitivo quanto um jogo?
 
-O LogiFlow 3D é um centro de distribuição que roda no navegador: armazéns, docas, caminhões e empilhadeiras numa cena 3D ligada aos indicadores da operação. A ideia é enxergar no espaço onde o gargalo acontece e testar uma decisão, como desviar a expedição de uma doca bloqueada, antes de aplicá-la.
+Dashboards mostram números, mas numa operação logística o problema quase sempre tem um lugar: uma doca parada, um armazém lotado, uma carga que não sai. Com essa ideia criei o LogiFlow 3D, um centro de distribuição interativo que roda direto no navegador.
 
-A primeira versão provava o conceito visual. Nesta, voltei ao código com olhar de produto: separei regra de negócio da renderização, tipei o domínio de ponta a ponta, cobri as regras com testes e coloquei tudo num pipeline de CI/CD.
+Em vez de interpretar uma tabela, você gira o pátio, entra nos armazéns, acompanha caminhões e empilhadeiras e testa decisões em tempo real. Bloqueia uma doca, vê a carga travar, aplica um balanceamento e os indicadores reagem na hora.
 
-O que mudou:
+É gamificação a serviço da decisão: explorar, experimentar e entender causa e efeito sem risco para a operação real.
 
-🧱 Arquitetura em camadas
-Domínio puro (capacidade, etapas de carga, estoque), camada de aplicação com reducer + seletores e a UI como adaptador. O Three.js não sabe o que é uma regra de negócio, e a regra de negócio não sabe que existe Three.js.
+Acredito que interfaces imersivas são um caminho natural para sistemas corporativos. Treinamento de equipes, simulação de cenários, digital twins e onboarding ficam muito mais claros quando a pessoa enxerga a operação em vez de apenas imaginá-la.
 
-🔒 Tipagem que impede estado inválido
-IDs como template literal types (`LF-${number}`, `TRK-${string}`), ações discriminadas e checagem exaustiva com `never` no reducer. Esquecer um caso vira erro de compilação, não bug em produção.
+🤖 IA como copiloto, experiência como direção
+A IA acelerou pesquisa, prototipagem, refatorações e testes. Arquitetura, UX e critérios de qualidade vieram da experiência com o ecossistema React. A IA multiplica a velocidade; saber usar bem as bibliotecas e frameworks define onde essa velocidade chega.
 
-🧪 Testes sem DOM
-20 testes rodando com `node --test` direto nas regras e nos casos de uso. Dá para validar "doca bloqueada trava a expedição até o balanceamento" sem abrir o navegador.
+🛠️ Entrega com qualidade
+• React 19, TypeScript estrito, Three.js e React Three Fiber
+• Clean Architecture: regras de negócio puras, independentes da cena 3D
+• Testes automatizados nas regras de simulação
+• Acessibilidade: navegação por teclado, respeito a movimento reduzido e alternativa quando não há WebGL
+• Layout responsivo, funcionando também no celular
+• CI/CD no GitHub Actions com deploy automático no GitHub Pages
 
-🎯 UX dentro do canvas
-Comparativo antes/depois nos KPIs (+36 pallets/h, +30 p.p. de demanda atendida), card do ativo flutuando sobre a cena, atalhos de teclado e rótulos HTML projetados sobre o 3D, com abas de setor para quem navega pelo teclado.
-
-🚀 CI/CD
-GitHub Actions com typecheck, lint, testes e dois builds: App Router para Cloudflare Workers e uma SPA estática publicada no GitHub Pages, reaproveitando a mesma página.
-
-No vídeo: simulo uma doca bloqueada, a carga trava na expedição, aplico o balanceamento e os indicadores são recalculados na hora.
-
-Os dados são fictícios e as regras de simulação são explícitas e determinísticas. Não há WMS real nem IA tomando decisões. Usei apoio de IA no desenvolvimento.
+Os dados são fictícios e as regras de simulação são explícitas. É uma prova de conceito para mostrar o potencial da abordagem, não um WMS real.
 
 🔗 Demo: https://renanfrontend.github.io/logiflow-3d/
 💻 Código: https://github.com/renanfrontend/logiflow-3d
 
-Como você separa regra de negócio de renderização quando a interface é 3D?
+Em qual sistema do seu dia a dia uma experiência imersiva faria mais diferença?
 
-#React #TypeScript #Threejs #ReactThreeFiber #CleanArchitecture #Frontend #GitHubActions #Logistica
+#React #TypeScript #Threejs #ReactThreeFiber #Frontend #UX #Gamificacao #InteligenciaArtificial #Inovacao
 
 ## Instagram Reels
 
