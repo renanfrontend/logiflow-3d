@@ -31,7 +31,7 @@ Tabelas isoladas nem sempre mostram onde um gargalo acontece. O LogiFlow conecta
 
 React 19 · TypeScript · Three.js · React Three Fiber 9 · Drei · Lucide React · CSS · Vinext/Vite (App Router compatível com Next.js) · Cloudflare Workers.
 
-React Three Fiber foi identificado no print da referência. As demais escolhas são da implementação deste projeto; a stack completa do post original não foi confirmada.
+A cena 3D é declarada como componentes React via React Three Fiber, o que permite compartilhar estado e tipos com o restante da interface sem uma camada de sincronização manual.
 
 ## Executar
 
@@ -90,9 +90,9 @@ O estoque parte de um snapshot fictício. A transição de carregamento para tr�
 
 Uma ferramenta WebMCP opcional seleciona setores em navegadores compatíveis. O recurso é experimental e não é necessário para utilizar o aplicativo.
 
-## Inspiração
+## Autoria
 
-Conceito de interfaces corporativas 3D do [post fornecido como referência](https://lnkd.in/p/dHPpbUN). Identidade, código e regras desta implementação foram desenvolvidos para este projeto; não foi copiado código do autor da referência.
+Identidade visual, cena 3D e regras de simulação foram desenvolvidas para este projeto. Os modelos são gerados por código, sem assets 3D de terceiros; componentes de terceiros incluídos no repositório (`components/ui`, `vendor/`) mantêm suas licenças.
 
 ## Evolução possível
 

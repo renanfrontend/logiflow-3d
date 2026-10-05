@@ -6,7 +6,9 @@ Vídeos: `logiflow-3d-linkedin-16x9.mp4` (LinkedIn) e `logiflow-3d-reels-9x16.mp
 
 Dá para colocar Clean Architecture dentro de uma cena 3D?
 
-Voltei ao LogiFlow 3D, um centro de distribuição interativo que construí com React, TypeScript e React Three Fiber, e tratei o projeto como trataria um produto.
+O LogiFlow 3D é um centro de distribuição que roda no navegador: armazéns, docas, caminhões e empilhadeiras numa cena 3D ligada aos indicadores da operação. A ideia é enxergar no espaço onde o gargalo acontece e testar uma decisão, como desviar a expedição de uma doca bloqueada, antes de aplicá-la.
+
+A primeira versão provava o conceito visual. Nesta, voltei ao código com olhar de produto: separei regra de negócio da renderização, tipei o domínio de ponta a ponta, cobri as regras com testes e coloquei tudo num pipeline de CI/CD.
 
 O que mudou:
 
