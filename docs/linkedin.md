@@ -42,17 +42,29 @@ Os dados são fictícios: é uma prova de conceito de como interfaces imersivas 
 
 **Legenda:**
 
-Um centro logístico inteiro rodando no navegador 🏭📦
+Sistemas corporativos não precisam parecer planilhas 🏭📦
 
-Bloqueei uma doca, a carga travou, apliquei o balanceamento e os KPIs se recalcularam na hora. Tudo em React + Three.js, com regra de negócio separada da cena 3D.
+Criei o LogiFlow 3D: um centro de distribuição interativo em 3D, rodando direto no navegador.
 
-⚙️ React Three Fiber · TypeScript estrito · Clean Architecture · CI/CD no GitHub Actions
+Bloqueio uma doca, a carga trava, aplico um balanceamento e os indicadores reagem na hora. Uma experiência imersiva, quase gamificada, com a solidez de um produto real.
 
-Responsivo de verdade: o vídeo foi gravado no layout mobile.
+Por trás do visual, o que mais de 7 anos de frontend me ensinaram a priorizar:
 
-Salva pra ver depois e me conta: que sistema você colocaria em 3D? 👇
+🧱 Clean Architecture: regra de negócio separada da cena 3D
+🔒 TypeScript estrito de ponta a ponta
+🎯 Acessibilidade e layout responsivo
+⚡ Performance em 3D
+🚀 Testes e CI/CD no GitHub Actions
 
-#react #typescript #threejs #frontend #webdev #programacao #desenvolvedorfrontend #javascript #reactthreefiber #cleanarchitecture
+Stack: React · TypeScript · Three.js · React Three Fiber
+
+💼 Estou aberto a novas oportunidades como Dev Frontend Sênior. Me chama na DM!
+
+Código e demo: github.com/renanfrontend/logiflow-3d
+
+#react #typescript #threejs #frontend #webdev #reactthreefiber #desenvolvedorfrontend #programacao #vagas #opentowork
+
+**Limites:** cerca de 900 caracteres (Instagram aceita até 2.200) e 10 hashtags (limite de 30).
 
 **Texto da capa:** "Clean Architecture em 3D?"
 
