@@ -9,6 +9,11 @@ const HOME = new Vector3(...INITIAL_CAMERA_POSITION);
 const ORIGIN = new Vector3(0, 0, 0);
 /** Proporção do mundo visível — ajusta o zoom ortográfico ao container. */
 const FIT = { width: 39, height: 28 } as const;
+/**
+ * Em containers estreitos o ajuste pela largura deixava o pátio minúsculo.
+ * Aceitamos cortar a borda de árvores para priorizar armazéns e veículos.
+ */
+const COMPACT = { maxWidth: 640, width: 30 } as const;
 const EASING = 7;
 const EPSILON = 0.01;
 
@@ -21,7 +26,10 @@ interface CameraRigProps {
   readonly instant: boolean;
 }
 
-const fitZoom = (width: number, height: number): number => Math.min(width / FIT.width, height / FIT.height);
+const fitZoom = (width: number, height: number): number => {
+  const fitWidth = width < COMPACT.maxWidth ? COMPACT.width : FIT.width;
+  return Math.min(width / fitWidth, height / FIT.height);
+};
 
 export function CameraRig({ ref, instant }: CameraRigProps) {
   const controls = useRef<ComponentRef<typeof OrbitControls>>(null);
