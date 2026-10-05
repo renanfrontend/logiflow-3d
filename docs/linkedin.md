@@ -42,29 +42,32 @@ Os dados são fictícios: é uma prova de conceito de como interfaces imersivas 
 
 **Legenda:**
 
-Sistemas corporativos não precisam parecer planilhas 🏭📦
+Sistemas de empresa não precisam ser difíceis de usar 🏭📦
 
-Criei o LogiFlow 3D: um centro de distribuição interativo em 3D, rodando direto no navegador.
+Criei o LogiFlow 3D, um centro de distribuição que você explora direto no navegador, como se estivesse olhando uma maquete.
 
-Bloqueio uma doca, a carga trava, aplico um balanceamento e os indicadores reagem na hora. Uma experiência imersiva, quase gamificada, com a solidez de um produto real.
+Em vez de ler tabelas cheias de números, você vê a operação acontecendo: armazéns, caminhões e empilhadeiras em movimento.
 
-Por trás do visual, o que mais de 7 anos de frontend me ensinaram a priorizar:
+Quer saber o que acontece se uma doca parar? É só testar. A carga trava, você escolhe uma solução e os resultados mudam na hora, na sua frente.
 
-🧱 Clean Architecture: regra de negócio separada da cena 3D
-🔒 TypeScript estrito de ponta a ponta
-🎯 Acessibilidade e layout responsivo
-⚡ Performance em 3D
-🚀 Testes e CI/CD no GitHub Actions
+A ideia é simples: quando a pessoa enxerga o problema, entende mais rápido e decide melhor. Sem manual, sem treinamento longo.
 
-Stack: React · TypeScript · Three.js · React Three Fiber
+E simples por fora não quer dizer improvisado por dentro. Em mais de 7 anos criando interfaces, aprendi que uma boa experiência precisa:
 
-💼 Estou aberto a novas oportunidades como Dev Frontend Sênior. Me chama na DM!
+✅ Funcionar bem no computador e no celular
+✅ Ser fácil para todos, inclusive para quem navega só pelo teclado
+✅ Responder rápido, mesmo com gráficos em 3D
+✅ Ser testada antes de chegar a quem usa
+
+Os dados são fictícios: é um projeto de demonstração.
+
+💼 Estou aberto a novas oportunidades como Desenvolvedor Frontend Sênior. Se sua empresa quer produtos que as pessoas gostem de usar, me chama na DM!
 
 Código e demo: github.com/renanfrontend/logiflow-3d
 
-#react #typescript #threejs #frontend #webdev #reactthreefiber #desenvolvedorfrontend #programacao #vagas #opentowork
+#frontend #react #threejs #ux #experienciadousuario #webdev #desenvolvedorfrontend #programacao #vagas #opentowork
 
-**Limites:** cerca de 900 caracteres (Instagram aceita até 2.200) e 10 hashtags (limite de 30).
+**Limites:** cerca de 1.300 caracteres (Instagram aceita até 2.200) e 10 hashtags (limite de 30).
 
 **Texto da capa:** "Clean Architecture em 3D?"
 
