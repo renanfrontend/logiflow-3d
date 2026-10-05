@@ -48,8 +48,6 @@ Bloqueei uma doca, a carga travou, apliquei o balanceamento e os KPIs se recalcu
 
 Responsivo de verdade: o vídeo foi gravado no layout mobile.
 
-Link do código e da demo na bio 🔗
-
 Salva pra ver depois e me conta: que sistema você colocaria em 3D? 👇
 
 #react #typescript #threejs #frontend #webdev #programacao #desenvolvedorfrontend #javascript #reactthreefiber #cleanarchitecture
