@@ -1,8 +1,10 @@
 # LogiFlow 3D
 
+[![CI & Deploy](https://github.com/renanfrontend/logiflow-3d/actions/workflows/ci.yml/badge.svg)](https://github.com/renanfrontend/logiflow-3d/actions/workflows/ci.yml)
+
 🇧🇷 Centro de distribuição interativo com simulação de decisões operacionais. Projeto de portfólio de **Renan Augusto dos Santos**.
 
-[Abrir demonstração pública](https://logiflow-3d-renan.renan-gabba.chatgpt.site)
+[Demonstração no GitHub Pages](https://renanfrontend.github.io/logiflow-3d/) · [Demonstração original](https://logiflow-3d-renan.renan-gabba.chatgpt.site)
 
 ## O problema
 
@@ -18,6 +20,11 @@ Tabelas isoladas nem sempre mostram onde um gargalo acontece. O LogiFlow conecta
 - Cenários normal, pico de demanda e doca bloqueada.
 - Balanceamento determinístico e indicadores derivados da mesma função de domínio.
 - Expedição demonstrativa por carga, mantida somente durante a sessão.
+- Comparativo antes/depois do balanceamento direto nos indicadores (+36/h, +30 p.p.).
+- Card flutuante do ativo selecionado sobre a cena, sem deslocar o layout.
+- Atalhos de teclado: `1` `2` `3` setores · `Espaço` pausa · `R` câmera · `H` ocupação · `I` interior · `Esc` fecha o ativo.
+- Legenda da camada de ocupação com limiares definidos no domínio.
+- Reinício da simulação a partir do laboratório de decisões.
 - Interface responsiva, preferência de movimento reduzido e fallback para falha de WebGL.
 
 ## Stack
@@ -32,23 +39,42 @@ Requer Node.js >= 22.13 e pnpm (versão declarada em package.json).
 
 ```bash
 pnpm install --frozen-lockfile
-pnpm dev
+pnpm dev            # App Router (vinext) em http://localhost:5173
 ```
 
-```bash
-pnpm exec tsc --noEmit
-node --experimental-strip-types --test lib/logiflow/simulation.test.ts
-pnpm build
-```
+| Script | O que faz |
+| --- | --- |
+| `pnpm typecheck` | TypeScript estrito, sem emissão |
+| `pnpm lint` | ESLint (next/core-web-vitals + typescript) |
+| `pnpm test` | Testes do domínio e da camada de aplicação (`node --test`) |
+| `pnpm build` | Build App Router para Cloudflare Workers |
+| `pnpm build:pages` | Build estático (SPA) em `out-pages/` para o GitHub Pages |
 
 ## Arquitetura
 
-- `app/page.tsx`: estado e controles da operação; carregamento da cena somente no cliente.
-- `components/logiflow/Scene.tsx`: renderização, geometria procedural, picking e animação com delta time limitado.
-- `lib/logiflow/simulation.ts`: dados fictícios e função pura de projeção.
-- `docs/linkedin.md`: texto e roteiro para divulgação.
+Camadas inspiradas em Clean Architecture, com dependências apontando para dentro:
 
-A cena é carregada sob demanda para separar o bundle 3D. DPR limitado a 1,5, sombras de resolução limitada e geometrias simples ajudam a reduzir o custo gráfico. Os modelos são criados por código, sem assets externos de terceiros.
+```
+lib/logiflow/
+├── domain/          regras puras: capacidade, etapas de carga, estoque, fixtures tipadas
+├── application/     reducer da operação + seletores (casos de uso, sem React)
+└── presentation/    formatação de mensagens e geometria da rota (puro, testável)
+hooks/logiflow/      adaptadores React: use-operation, atalhos, media queries, WebMCP
+components/logiflow/ UI (MetricsGrid, MapCard, AssetPanel, Tracking, DecisionLab…)
+└── scene/           Three.js / R3F: Scene, Yard, WarehouseModel, Truck, Forklift, CameraRig, LabelProjector
+static/              entrypoint Vite do build estático (shim de next/link)
+```
+
+- O estado da operação vive num `useReducer` com ações discriminadas e checagem exaustiva (`never`).
+- Os indicadores são derivados por seletores puros a partir do mesmo modelo usado nos testes.
+- A cena é carregada sob demanda (chunk separado). Os rótulos dos setores são botões HTML projetados pelo `LabelProjector`, sem `<Html>` por frame.
+- DPR limitado a 1,5, sombras de resolução limitada e geometrias procedurais (sem assets de terceiros).
+
+## CI/CD
+
+`.github/workflows/ci.yml` roda typecheck, lint, testes e os dois builds em cada push e PR. Em `main`, o build estático é publicado no GitHub Pages.
+
+> Primeira vez: em **Settings → Pages → Build and deployment**, selecione **GitHub Actions** como fonte.
 
 ## Premissas e limites
 

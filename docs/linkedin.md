@@ -1,36 +1,59 @@
-# Texto sugerido para LinkedIn
+# Divulgação — LogiFlow 3D
 
-Como transformar uma operação logística em uma experiência que seja mais fácil de entender?
+Vídeos: `logiflow-3d-linkedin-16x9.mp4` (LinkedIn) e `logiflow-3d-reels-9x16.mp4` (Instagram Reels).
 
-Essa pergunta guiou o LogiFlow 3D, um projeto demonstrativo que conecta minha experiência em logística ao desenvolvimento frontend.
+## LinkedIn
 
-Com React, TypeScript, Three.js e React Three Fiber, construí um centro de distribuição interativo em que é possível:
+Dá para colocar Clean Architecture dentro de uma cena 3D?
 
-• Explorar recebimento, fulfillment e expedição em uma cena isométrica 3D.
-• Inspecionar o interior dos armazéns, caminhões e empilhadeiras.
-• Acompanhar cargas em cinco etapas e atualizar o estoque na saída.
-• Simular picos de demanda e bloqueio de docas.
-• Comparar capacidade, fila projetada e percentual de demanda atendida.
-• Aplicar um balanceamento e observar o efeito das premissas nos indicadores.
+Voltei ao LogiFlow 3D, um centro de distribuição interativo que construí com React, TypeScript e React Three Fiber, e tratei o projeto como trataria um produto.
 
-O desafio foi conectar a cena 3D ao estado da interface e às regras de simulação, mantendo uma alternativa de navegação por controles HTML.
+O que mudou:
 
-Os dados são fictícios e o balanceamento é baseado em regras explícitas. Não há integração com um WMS real nem inteligência artificial tomando decisões. Utilizei apoio de IA no desenvolvimento, com foco em transformar a ideia em uma experiência funcional.
+🧱 Arquitetura em camadas
+Domínio puro (capacidade, etapas de carga, estoque), camada de aplicação com reducer + seletores e a UI como adaptador. O Three.js não sabe o que é uma regra de negócio, e a regra de negócio não sabe que existe Three.js.
 
-Projeto inspirado na discussão sobre interfaces corporativas 3D deste post: https://lnkd.in/p/dHPpbUN
+🔒 Tipagem que impede estado inválido
+IDs como template literal types (`LF-${number}`, `TRK-${string}`), ações discriminadas e checagem exaustiva com `never` no reducer. Esquecer um caso vira erro de compilação, não bug em produção.
 
-Qual processo do seu dia a dia faria mais sentido em uma interface espacial?
+🧪 Testes sem DOM
+20 testes rodando com `node --test` direto nas regras e nos casos de uso. Dá para validar "doca bloqueada trava a expedição até o balanceamento" sem abrir o navegador.
 
-#React #TypeScript #Threejs #ReactThreeFiber #Frontend #Logistica #Portfolio
+🎯 UX dentro do canvas
+Comparativo antes/depois nos KPIs (+36 pallets/h, +30 p.p. de demanda atendida), card do ativo flutuando sobre a cena, atalhos de teclado e rótulos HTML projetados sobre o 3D, com abas de setor para quem navega pelo teclado.
 
-## Roteiro de demonstração — 45 segundos
+🚀 CI/CD
+GitHub Actions com typecheck, lint, testes e dois builds: App Router para Cloudflare Workers e uma SPA estática publicada no GitHub Pages, reaproveitando a mesma página.
 
-1. 0–10s: girar o centro logístico e selecionar os três setores.
-2. 10–20s: ativar a camada de ocupação e selecionar pico de demanda.
-3. 20–30s: mostrar a fila projetada e aplicar balanceamento.
-4. 30–40s: comparar o cenário de doca bloqueada com e sem alternativa.
-5. 40–45s: expedir uma carga e encerrar na visão geral.
+No vídeo: simulo uma doca bloqueada, a carga trava na expedição, aplico o balanceamento e os indicadores são recalculados na hora.
 
-Demonstração: https://logiflow-3d-renan.renan-gabba.chatgpt.site
+Os dados são fictícios e as regras de simulação são explícitas e determinísticas. Não há WMS real nem IA tomando decisões. Usei apoio de IA no desenvolvimento.
 
-Código: https://github.com/renanfrontend/logiflow-3d
+🔗 Demo: https://renanfrontend.github.io/logiflow-3d/
+💻 Código: https://github.com/renanfrontend/logiflow-3d
+
+Como você separa regra de negócio de renderização quando a interface é 3D?
+
+#React #TypeScript #Threejs #ReactThreeFiber #CleanArchitecture #Frontend #GitHubActions #Logistica
+
+## Instagram Reels
+
+**Legenda:**
+
+Um centro logístico inteiro rodando no navegador 🏭📦
+
+Bloqueei uma doca, a carga travou, apliquei o balanceamento e os KPIs se recalcularam na hora. Tudo em React + Three.js, com regra de negócio separada da cena 3D.
+
+⚙️ React Three Fiber · TypeScript estrito · Clean Architecture · CI/CD no GitHub Actions
+
+Responsivo de verdade: o vídeo foi gravado no layout mobile.
+
+Link do código e da demo na bio 🔗
+
+Salva pra ver depois e me conta: que sistema você colocaria em 3D? 👇
+
+#react #typescript #threejs #frontend #webdev #programacao #desenvolvedorfrontend #javascript #reactthreefiber #cleanarchitecture
+
+**Texto da capa:** "Clean Architecture em 3D?"
+
+**Dica:** escolha um áudio em alta no próprio app; o vídeo não tem trilha para não conflitar com ela.
