@@ -4,7 +4,7 @@
 
 🇧🇷 Centro de distribuição interativo com simulação de decisões operacionais. Projeto de portfólio de **Renan Augusto dos Santos**.
 
-[Demonstração no GitHub Pages](https://renanfrontend.github.io/logiflow-3d/) · [Demonstração original](https://logiflow-3d-renan.renan-gabba.chatgpt.site)
+[Demonstração no GitHub Pages](https://renanfrontend.github.io/logiflow-3d/)
 
 ## O problema
 
@@ -94,6 +94,14 @@ Uma ferramenta WebMCP opcional seleciona setores em navegadores compatíveis. O 
 
 Identidade visual, cena 3D e regras de simulação foram desenvolvidas para este projeto. Os modelos são gerados por código, sem assets 3D de terceiros; componentes de terceiros incluídos no repositório (`components/ui`, `vendor/`) mantêm suas licenças.
 
+## Licença e direitos autorais
+
+© 2026 Renan Augusto dos Santos. **Todos os direitos reservados.**
+
+O código está público apenas para fins de portfólio e avaliação profissional. Não é permitido copiar, modificar, redistribuir ou usar comercialmente este projeto, no todo ou em parte, sem autorização por escrito. Veja os termos completos em [LICENSE](LICENSE).
+
+Para reportar uma vulnerabilidade, consulte [SECURITY.md](SECURITY.md).
+
 ## Evolução possível
 
 Integração com APIs de estoque, eventos de telemetria, testes de interação em dispositivos reais, otimização com restrições, internacionalização e estudo de usabilidade. São próximos passos, não recursos implementados.
@@ -105,3 +113,5 @@ Integração com APIs de estoque, eventos de telemetria, testes de interação e
 An interactive 3D logistics operations demo by **Renan Augusto dos Santos**. Built with React, TypeScript, Three.js and React Three Fiber. Explore warehouse sectors, simulate demand peaks and blocked docks, and compare explicit capacity assumptions.
 
 All data is fictional. Shipment actions are session-only. Truck and forklift movement is illustrative. Shipment stages advance manually; departure deducts the corresponding pallet count. There is no live WMS integration or AI decision engine. The domain model is deterministic and covered by focused tests. Run the commands above with Node.js >=22.13 and pnpm.
+
+© 2026 Renan Augusto dos Santos. All rights reserved. The source is public for portfolio evaluation only; copying, modifying, redistributing or commercial use requires written permission. See [LICENSE](LICENSE).
