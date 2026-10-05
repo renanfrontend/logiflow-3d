@@ -61,11 +61,11 @@ E simples por fora não quer dizer improvisado por dentro. Em mais de 7 anos cri
 
 Os dados são fictícios: é um projeto de demonstração.
 
-💼 Estou aberto a novas oportunidades como Desenvolvedor Frontend Sênior. Se sua empresa quer produtos que as pessoas gostem de usar, me chama na DM!
+💡 Quer tirar do papel um site ou sistema como esse, fácil de usar e com a cara do seu negócio? Me chama na DM e vamos conversar sobre a sua ideia!
 
 Código e demo: github.com/renanfrontend/logiflow-3d
 
-#frontend #react #threejs #ux #experienciadousuario #webdev #desenvolvedorfrontend #programacao #vagas #opentowork
+#frontend #react #threejs #ux #experienciadousuario #webdev #desenvolvedorfrontend #desenvolvimentoweb #sistemasweb #criacaodesites
 
 **Limites:** cerca de 1.300 caracteres (Instagram aceita até 2.200) e 10 hashtags (limite de 30).
 
